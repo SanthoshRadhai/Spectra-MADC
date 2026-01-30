@@ -1,6 +1,65 @@
+import { useEffect, useRef, useState } from 'react';
 import './About.css';
 
 export default function About(){
+    const [yearsCount, setYearsCount] = useState(0);
+    const [participantsCount, setParticipantsCount] = useState(0);
+    const [prizeCount, setPrizeCount] = useState(0);
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const statsRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !hasAnimated) {
+                        setHasAnimated(true);
+                        
+                        // Animate Years (0 to 5)
+                        let currentYears = 0;
+                        const yearsInterval = setInterval(() => {
+                            currentYears += 1;
+                            setYearsCount(currentYears);
+                            if (currentYears >= 5) clearInterval(yearsInterval);
+                        }, 200);
+
+                        // Animate Participants (0 to 1000)
+                        let currentParticipants = 0;
+                        const participantsInterval = setInterval(() => {
+                            currentParticipants += 50;
+                            setParticipantsCount(currentParticipants);
+                            if (currentParticipants >= 1000) {
+                                setParticipantsCount(1000);
+                                clearInterval(participantsInterval);
+                            }
+                        }, 30);
+
+                        // Animate Prize (0 to 10000)
+                        let currentPrize = 0;
+                        const prizeInterval = setInterval(() => {
+                            currentPrize += 500;
+                            setPrizeCount(currentPrize);
+                            if (currentPrize >= 10000) {
+                                setPrizeCount(10000);
+                                clearInterval(prizeInterval);
+                            }
+                        }, 30);
+                    }
+                });
+            },
+            { threshold: 0.3 }
+        );
+
+        if (statsRef.current) {
+            observer.observe(statsRef.current);
+        }
+
+        return () => {
+            if (statsRef.current) {
+                observer.unobserve(statsRef.current);
+            }
+        };
+    }, [hasAnimated]);
 
     return (
         <section id="about" className="about-section">
@@ -25,17 +84,17 @@ export default function About(){
                             <div className="about-underline"></div>
                         </div>
 
-                        <div className="about-stats">
+                        <div className="about-stats" ref={statsRef}>
                             <div className="stat-item">
-                                <div className="stat-number">5+</div>
+                                <div className="stat-number">{yearsCount}+</div>
                                 <div className="stat-label">Years</div>
                             </div>
                             <div className="stat-item">
-                                <div className="stat-number">1K+</div>
+                                <div className="stat-number">{participantsCount >= 1000 ? '1K' : participantsCount}+</div>
                                 <div className="stat-label">Participants</div>
                             </div>
                             <div className="stat-item">
-                                <div className="stat-number">10000+</div>
+                                <div className="stat-number">{prizeCount}+</div>
                                 <div className="stat-label">Prize Money</div>
                             </div>
                         </div>
