@@ -11,7 +11,9 @@ export default function Footer() {
                 <div className="footer-column footer-brand">
                     <div className="footer-logo">
                         <span className="logo-text">SPECTRA</span>
+                        
                     </div>
+                    <img src='/logoMADC.png' width={100}/>
                     <p className="footer-org-name">
                         Kongu Engineering<br />
                         College
@@ -59,6 +61,8 @@ export default function Footer() {
                 {/* Right Column - Social */}
                 <div className="footer-column footer-social">
                     <h3 className="footer-heading">SPECTRA'25</h3>
+
+                    
                     <a
                         href="https://instagram.com/spectra_arena"
                         target="_blank"
