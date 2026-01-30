@@ -12,6 +12,7 @@ export default function Footer() {
           <div className="footer-logo">
             <span className="logo-text">SPECTRA</span>
           </div>
+          <img src='/logoMADC.png' loading='lazy' alt='MADC logo' width={70}/>
           <p className="footer-org-name">Kongu Engineering College</p>
         </div>
 
@@ -44,7 +45,7 @@ export default function Footer() {
               className="contact-link contact-email"
             >
               <span className="contact-icon" aria-hidden="true">✉</span>{" "}
-              spectraarena@gmail.com
+              madcoffical2022@gmail.com
             </a>
           </div>
         </div>
@@ -61,7 +62,7 @@ export default function Footer() {
         <div className="footer-column footer-social">
           <h3 className="footer-heading">SPECTRA'25</h3>
           <a
-            href="https://www.instagram.com/spectra_kec/"
+            href="https://www.instagram.com/madc_of_kec?igsh=MTZrYnN1MmllejJreQ=="
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"
@@ -76,7 +77,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <p className="footer-credits">
           Designed by{" "}
-          <span className="credits-highlight">Santhosh Radhai</span>
+          <a className="credits-highlight" href='https://www.linkedin.com/in/santhosh-v-43a161227/' target="_blank" rel="noopener noreferrer">Santhosh Radhai</a>
         </p>
       </div>
 

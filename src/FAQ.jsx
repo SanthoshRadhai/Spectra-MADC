@@ -9,7 +9,7 @@ export default function FAQ() {
         {
             category: "Registration",
             question: "How many events can we participate ? ",
-            answer: "You can participate in multiple events as long as their timings don't overlap."
+            answer: "You can participate in at most of two technical event and one non technical event"
         },
         {
             category: "Registration",
