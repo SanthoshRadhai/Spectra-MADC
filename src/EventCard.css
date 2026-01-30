@@ -153,7 +153,7 @@
 
 .event-subtitle {
   font-family: 'Chakra Petch', sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.6);
   letter-spacing: 2px;
   margin: 0.5rem 0 0 0;
@@ -238,7 +238,8 @@
 .event-description {
   font-family: 'Chakra Petch', sans-serif;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
+  /* font-size: 0.9rem; */
+  font-size: 1.2rem;
   line-height: 1.6;
   margin: 1.2rem 0;
   flex-grow: 1;

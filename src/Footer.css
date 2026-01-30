@@ -5,9 +5,10 @@
     position: relative;
     overflow: hidden;
     border-top: 1px solid rgba(255, 50, 50, 0.3);
+    will-change: transform; /* Optimize for animations */
 }
 
-/* Decorative top line */
+/* Decorative top line - optimized */
 .footer-top-line {
     position: absolute;
     top: 0;
@@ -16,6 +17,7 @@
     height: 2px;
     background: linear-gradient(90deg, transparent, #ff3232, transparent);
     box-shadow: 0 0 10px rgba(255, 50, 50, 0.8);
+    transform: translateZ(0); /* Force GPU acceleration */
 }
 
 /* Footer Container */
@@ -47,15 +49,12 @@
 }
 
 .logo-text {
-    /* font-family: 'Orbitron', sans-serif; */
     font-family: 'Gang of Three', 'Orbitron', sans-serif;
     font-size: 2rem;
     font-weight: 900;
     color: #ff3232;
     letter-spacing: 4px;
-    text-shadow: 
-        0 0 20px rgba(255, 50, 50, 0.8),
-        0 0 40px rgba(255, 50, 50, 0.5);
+    text-shadow: 0 0 20px rgba(255, 50, 50, 0.6);
     display: block;
 }
 
@@ -131,8 +130,9 @@
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
     letter-spacing: 0.5px;
+    will-change: transform; /* Optimize hover animation */
 }
 
 .contact-link:hover {
@@ -171,9 +171,10 @@
     border: 1px solid rgba(255, 50, 50, 0.3);
     border-radius: 4px;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     margin-top: 0.5rem;
     width: fit-content;
+    will-change: transform; /* Optimize hover animation */
 }
 
 .social-link:hover {
@@ -224,12 +225,13 @@
     font-weight: 600;
 }
 
-/* Decorative corner accents */
+/* Decorative corner accents - optimized */
 .footer-corner {
     position: absolute;
     width: 80px;
     height: 80px;
     pointer-events: none;
+    transform: translateZ(0); /* Force GPU acceleration */
 }
 
 .footer-corner::before,

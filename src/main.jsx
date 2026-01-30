@@ -19,6 +19,5 @@ app.render(
     <EventDetails/>
     <FAQ/>
     <Footer/>
-
   </React.StrictMode>
 );
