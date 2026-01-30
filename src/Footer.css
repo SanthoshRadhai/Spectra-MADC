@@ -65,6 +65,12 @@
     line-height: 1.6;
     margin: 0;
     letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.footer-org-name:hover {
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 1.5px;
 }
 
 /* Headings */
@@ -78,6 +84,12 @@
     margin-bottom: 1.5rem;
     position: relative;
     padding-bottom: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.footer-heading:hover {
+    letter-spacing: 4px;
+    color: #ff3232;
 }
 
 .footer-heading::after {
@@ -123,6 +135,12 @@
     color: rgba(255, 255, 255, 0.6);
     margin: 0;
     letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.contact-name:hover {
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
 }
 
 .contact-link {
@@ -154,6 +172,12 @@
     line-height: 1.8;
     font-style: normal;
     letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.address-text:hover {
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 0.8px;
 }
 
 /* Social Column */
@@ -191,12 +215,17 @@
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover .social-platform {
+    letter-spacing: 1.5px;
 }
 
 .social-arrow {
     font-size: 1.2rem;
     color: #ff3232;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover .social-arrow {
@@ -223,6 +252,12 @@
 .credits-highlight {
     color: #fff;
     font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.credits-highlight:hover {
+    color: #ff3232;
+    text-shadow: 0 0 10px rgba(255, 50, 50, 0.6);
 }
 
 /* Decorative corner accents - optimized */

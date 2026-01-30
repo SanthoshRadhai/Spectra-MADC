@@ -67,6 +67,19 @@
   letter-spacing: 8px;
   margin-bottom: 1rem;
   text-transform: uppercase;
+  opacity: 0;
+  animation: titleFadeIn 1.2s ease-out 0.3s forwards;
+}
+
+@keyframes titleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .overlay p {
@@ -75,6 +88,25 @@
   color: rgba(255, 255, 255, 0.8);
   letter-spacing: 2px;
   margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeInSlide 1s ease-out 0.6s forwards;
+  transition: all 0.3s ease;
+}
+
+.overlay p:hover {
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: 3px;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .overlay button {
@@ -87,8 +119,10 @@
   font-weight: 700;
   letter-spacing: 3px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   text-transform: uppercase;
+  opacity: 0;
+  animation: fadeInSlide 1s ease-out 0.9s forwards;
 }
 
 .overlay button:hover {
@@ -138,6 +172,15 @@
   text-transform: uppercase;
   z-index: 1001;
   position: relative;
+  transition: all 0.4s ease;
+}
+
+.navbar-logo:hover {
+  letter-spacing: 8px;
+  text-shadow: 
+    0 0 15px rgba(255, 50, 50, 1),
+    0 0 30px rgba(255, 50, 50, 0.7),
+    0 0 45px rgba(255, 50, 50, 0.5);
 }
 
 .navbar-links {
@@ -155,7 +198,7 @@
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 2px;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   text-transform: uppercase;
 }
@@ -354,6 +397,14 @@
   margin-bottom: 5rem;
   position: relative;
   z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-header.scroll-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .japanese-accent {
@@ -363,8 +414,12 @@
   display: block;
   line-height: 1;
   margin-bottom: -3rem;
-  text-shadow: 0 0 30px rgba(255, 50, 50, 0.3);
+  text-shadow: 0 0 30px rgba(255, 50, 50, 0.3);  transition: all 0.4s ease;
 }
+
+.japanese-accent:hover {
+  color: rgba(255, 50, 50, 0.2);
+  text-shadow: 0 0 50px rgba(255, 50, 50, 0.5);}
 
 .section-title {
   font-family: 'Orbitron', sans-serif;

@@ -7,6 +7,7 @@ import About from './About.jsx';
 import EventDetails from './EventDetails.jsx';
 import FAQ from './FAQ.jsx';
 import Footer from './Footer.jsx';
+import { initScrollAnimations } from './scrollAnimations.js';
 
 
 const root = document.getElementById('root');
@@ -21,3 +22,8 @@ app.render(
     <Footer/>
   </React.StrictMode>
 );
+
+// Initialize scroll animations after DOM is ready
+setTimeout(() => {
+  initScrollAnimations();
+}, 100);

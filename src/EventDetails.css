@@ -11,7 +11,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 /* Cyberpunk grid background */
@@ -103,6 +102,14 @@
         inset 0 0 80px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(15px);
     overflow-y: auto;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.details-container.scroll-in {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .details-container::-webkit-scrollbar {
@@ -137,6 +144,14 @@
     box-shadow: 0 0 20px rgba(255, 50, 50, 0.2);
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease-out 0.1s, transform 0.5s ease-out 0.1s;
+}
+
+.fee-banner.scroll-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .fee-banner::before {
@@ -163,6 +178,12 @@
     letter-spacing: 3px;
     position: relative;
     z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.fee-label:hover {
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 4px;
 }
 
 .fee-amount {
@@ -175,6 +196,14 @@
         0 0 40px rgba(255, 50, 50, 0.5);
     position: relative;
     z-index: 1;
+    transition: all 0.4s ease;
+}
+
+.fee-amount:hover {
+    transform: scale(1.05);
+    text-shadow: 
+        0 0 30px rgba(255, 50, 50, 1),
+        0 0 60px rgba(255, 50, 50, 0.7);
 }
 
 .fee-note {
@@ -184,6 +213,11 @@
     letter-spacing: 2px;
     position: relative;
     z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.fee-note:hover {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* Key Message - compact */
@@ -202,6 +236,18 @@
     line-height: 1.5;
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease-out 0.2s, transform 0.5s ease-out 0.2s, background 0.3s ease;
+}
+
+.key-message.scroll-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.key-message:hover {
+    background: rgba(255, 50, 50, 0.12);
 }
 
 .key-message::before {
@@ -234,10 +280,24 @@
     padding: 1rem 1.2rem;
     background: rgba(0, 0, 0, 0.3);
     border-left: 2px solid rgba(255, 50, 50, 0.3);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, opacity 0.5s ease-out, transform 0.5s ease-out;
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateX(-30px);
 }
+
+.info-item.scroll-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.info-item:nth-child(1) { transition-delay: 0.3s; }
+.info-item:nth-child(2) { transition-delay: 0.35s; }
+.info-item:nth-child(3) { transition-delay: 0.4s; }
+.info-item:nth-child(4) { transition-delay: 0.45s; }
+.info-item:nth-child(5) { transition-delay: 0.5s; }
+.info-item:nth-child(6) { transition-delay: 0.55s; }
 
 /* Sliding text background */
 .info-item::before {
