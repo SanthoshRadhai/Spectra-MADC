@@ -1,31 +1,51 @@
+import { useState } from "react";
 import "./HomePage.css";
 import EventCard from "./EventCard";
 import { events } from './Data/eventsData.js';
 import About from "./About.jsx";
 
 export default function Home() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     const handleRegister = (eventTitle) => {
         alert(`Registering for: ${eventTitle}`);
         // Add your registration logic here
     };
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
-
         <main>
-
             <nav className="navbar">
                 <div className="navbar-content">
                     <div className="navbar-logo">SPECTRA</div>
-                    <ul className="navbar-links">
-                        <li><a href="#events">Events</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                    
+                    {/* Hamburger Menu Icon */}
+                    <div 
+                        className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+                        onClick={toggleMenu}
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    
+                    {/* Navigation Links */}
+                    <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
+                        <li><a href="#events" onClick={closeMenu}>Events</a></li>
+                        <li><a href="#about" onClick={closeMenu}>About</a></li>
+                        <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
                     </ul>
                 </div>
             </nav>
 
             <div className="video-container">
-
                 <img src="/Top_Bg.png" alt="Background" className="background-image" style={{ zIndex: 0 }} />
 
                 <nav className="top-nav">
@@ -43,8 +63,6 @@ export default function Home() {
                     <p>Precision over noise. Purpose over hype.</p>
                     <button>Enter</button>
                 </div>
-
-
             </div>
 
             <section className="events-section">
@@ -73,17 +91,25 @@ export default function Home() {
                 </div>
 
                 {/* <About/> */}
-
             </section>
 
-            
-
-
+            {/* Overlay to close menu when clicking outside */}
+            {isMenuOpen && (
+                <div 
+                    className="menu-overlay" 
+                    onClick={closeMenu}
+                    style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        background: 'rgba(0, 0, 0, 0.5)',
+                        zIndex: 999,
+                        display: isMenuOpen ? 'block' : 'none'
+                    }}
+                />
+            )}
         </main>
-
-
-
-
     );
 }
-
