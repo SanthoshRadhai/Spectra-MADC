@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className="footer-section">
             {/* Decorative top border line */}
             <div className="footer-top-line"></div>
-            
+
             <div className="footer-container">
                 {/* Left Column - Logo and Organization */}
                 <div className="footer-column footer-brand">
@@ -25,15 +25,15 @@ export default function Footer() {
                         <div className="contact-item">
                             <span className="contact-icon">📞</span>
                             <div className="contact-details">
-                                <p className="contact-name">Jayaanth S R</p>
-                                <a href="tel:+919850828670" className="contact-link">+91 9850828670</a>
+                                <p className="contact-name">MUKIL</p>
+                                <a href="tel:+919843856004" className="contact-link">+91 9843856004</a>
                             </div>
                         </div>
                         <div className="contact-item">
                             <span className="contact-icon">📞</span>
                             <div className="contact-details">
-                                <p className="contact-name">Ravina</p>
-                                <a href="tel:+918438881820" className="contact-link">+91 8438881820</a>
+                                <p className="contact-name">MADHUVARSHINI</p>
+                                <a href="tel:+918012439337" className="contact-link">+91 8012439337</a>
                             </div>
                         </div>
                         <div className="contact-item">
@@ -59,9 +59,9 @@ export default function Footer() {
                 {/* Right Column - Social */}
                 <div className="footer-column footer-social">
                     <h3 className="footer-heading">SPECTRA'25</h3>
-                    <a 
-                        href="https://instagram.com/spectra_arena" 
-                        target="_blank" 
+                    <a
+                        href="https://instagram.com/spectra_arena"
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="social-link"
                     >
@@ -74,9 +74,18 @@ export default function Footer() {
             {/* Bottom Credits */}
             <div className="footer-bottom">
                 <p className="footer-credits">
-                    Designed by <span className="credits-highlight">Rapid Creations</span>
+                    Designed by{" "}
+                    <a
+                        href="https://www.linkedin.com/in/santhosh-v-43a161227/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="credits-highlight"
+                    >
+                        Santhosh Radhai
+                    </a>
                 </p>
             </div>
+
 
             {/* Decorative corner accents */}
             <div className="footer-corner bottom-left"></div>

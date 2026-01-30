@@ -8,54 +8,35 @@ export default function FAQ() {
     const faqs = [
         {
             category: "Registration",
-            question: "What is the registration process?",
-            answer: "Pay the ₹200 entry fee to receive your unique PARTICIPANT ID via email. Use this ID to register for individual events. Registration is verified manually by our team within 24-48 hours."
+            question: "How many events can we participate ? ",
+            answer: "You can participate in multiple events as long as their timings don't overlap."
         },
         {
             category: "Registration",
-            question: "Can I register as a team?",
-            answer: "Yes, you can register as a team, but each team member must pay the individual ₹200 registration fee to receive their own PARTICIPANT ID."
+            question: "Last date for registration ? ",
+            answer: "last date for registration is -----, however we encourage registering ASAP since few events may have limited seats and may get over."
         },
         {
-            category: "Events",
-            question: "How many events can I participate in?",
-            answer: "Once you pay the entry fee, you can participate in ANY and ALL events. There's no limit - your ₹200 unlocks access to the entire SPECTRA arena."
+            category: "Refreshment",
+            question: "Food ? ",
+            answer: "Food and refreshment will be provided."
         },
         {
-            category: "Events",
-            question: "What types of events are available?",
-            answer: "SPECTRA features a variety of combat sports and martial arts competitions, including traditional disciplines and modern combat formats. Specific event details and schedules will be sent to your registered email."
-        },
-        {
-            category: "Venue",
-            question: "Where is SPECTRA held?",
-            answer: "Venue details and complete location coordinates will be provided in your confirmation email after registration verification."
+            category: "Other",
+            question: "Parking and transportation?",
+            answer: "Separate parking facilities are available for two and four wheelers. Participants can park their vehicles at their own risk. Volunteers will guide you on the same."
         },
         {
             category: "Rules",
-            question: "What are the age requirements?",
-            answer: "Participants must be 16 years or older. Participants under 18 require parental consent forms, which will be provided during registration."
+            question: "Registration and Certificates",
+            answer: "Certificates will be provided."
         },
         {
-            category: "Prize",
-            question: "What is the total prize pool?",
-            answer: "SPECTRA offers over ₹10,000+ in total prize money distributed across all events, with additional awards for exceptional performances."
+            category: "Outfit",
+            question: "Dress code and college ID",
+            answer: "Please wear formal attire and bring your college ID for verification."
         },
-        {
-            category: "Logistics",
-            question: "Are food and refreshments provided?",
-            answer: "Yes! Refreshments and lunch are included in your ₹200 entry fee. All participants will receive meals and hydration throughout the event day."
-        },
-        {
-            category: "Support",
-            question: "What if I don't receive my PARTICIPANT ID?",
-            answer: "Check your spam/junk folder first. If you still haven't received it within 48 hours of payment, contact our support team immediately with your payment proof."
-        },
-        {
-            category: "Rules",
-            question: "What should I bring on event day?",
-            answer: "Bring your PARTICIPANT ID (digital or printed), valid photo ID, comfortable athletic wear, and any personal equipment specific to your chosen events. Detailed requirements will be in your confirmation email."
-        }
+        
     ];
 
     const handleToggle = (index) => {
