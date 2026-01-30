@@ -5,7 +5,12 @@
 
 /* end of Import Section */
 
-
+@font-face {
+    font-family: 'Gang of Three';
+    src: url('/Fonts/gang_of_three/go3v2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* Video Container */
 .video-container {
@@ -51,8 +56,8 @@
 }
 
 .overlay h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 4rem;
+  font-family: 'Gang of Three', 'Orbitron', sans-serif;
+  font-size: 6rem;
   font-weight: 900;
   color: #ff3232;
   text-shadow: 
@@ -119,8 +124,9 @@
 }
 
 .navbar-logo {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.8rem;
+  /* font-family: 'Orbitron', sans-serif; */
+  font-family: 'Gang of Three', 'Orbitron', sans-serif;
+  font-size: 2.5rem;
   font-weight: 900;
   color: #ff3232;
   text-shadow: 
