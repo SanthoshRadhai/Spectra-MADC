@@ -25,9 +25,9 @@ export default function Home() {
             <nav className="navbar">
                 <div className="navbar-content">
                     <div className="navbar-logo">SPECTRA</div>
-                    
+
                     {/* Hamburger Menu Icon */}
-                    <div 
+                    <div
                         className={`hamburger ${isMenuOpen ? 'active' : ''}`}
                         onClick={toggleMenu}
                     >
@@ -35,7 +35,7 @@ export default function Home() {
                         <span></span>
                         <span></span>
                     </div>
-                    
+
                     {/* Navigation Links */}
                     <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
                         <li><a href="#events" onClick={closeMenu}>Events</a></li>
@@ -46,7 +46,16 @@ export default function Home() {
             </nav>
 
             <div className="video-container">
-                <img src="/Top_Bg.png" alt="Background" className="background-image" style={{ zIndex: 0 }} />
+                <video
+                    className="background-video"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    poster="/Top_Bg.png"
+                >
+                    <source src="/Night.mp4" type="video/mp4" />
+                </video>
 
                 <nav className="top-nav">
                     <div className="logo">Midnight City</div>
@@ -80,7 +89,7 @@ export default function Home() {
                             backImage={event.backImage}
                             kanji={event.kanji}
                             title={event.title}
-                            subtitle={event.subtitle} 
+                            subtitle={event.subtitle}
                             date={event.date}
                             location={event.location}
                             price={event.price}
@@ -95,8 +104,8 @@ export default function Home() {
 
             {/* Overlay to close menu when clicking outside */}
             {isMenuOpen && (
-                <div 
-                    className="menu-overlay" 
+                <div
+                    className="menu-overlay"
                     onClick={closeMenu}
                     style={{
                         position: 'fixed',

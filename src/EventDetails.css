@@ -4,7 +4,11 @@
     height: 100vh;
     /* background: linear-gradient(135deg, #0a0e10 0%, #1a0f0f 50%, #0a0e10 100%); */
     /* background: linear-gradient(135deg, #0d1418 0%, #1a1f24 100%); */
-    background: linear-gradient(180deg, #0a0e10 0%, #0d1418 100%);
+    /* background: linear-gradient(180deg, #0a0e10 0%, #0d1418 100%);
+     */
+    background: 
+    url('/WhiteNinja.jpeg') center / cover no-repeat fixed,
+    #0a0e10;
     padding: 0;
     position: relative;
     overflow: hidden;
