@@ -3,6 +3,7 @@ import "./HomePage.css";
 import EventCard from "./EventCard";
 import { events } from './Data/eventsData.js';
 import About from "./About.jsx";
+import Countdown from "./Countdown.jsx";
 
 export default function Home() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,6 +54,9 @@ export default function Home() {
                     loop
                     playsInline
                     poster="/Top_Bg.png"
+                    disablePictureInPicture
+                    onContextMenu={(e) => e.preventDefault()}
+                    style={{ pointerEvents: 'none' }}
                 >
                     <source src="/Night.mp4" type="video/mp4" />
                 </video>
@@ -69,13 +73,25 @@ export default function Home() {
                 <div className="overlay">
                     <h1>SPECTRA</h1>
                     <p>Enter with Skill. Leave with Legacy.</p>
-                    <p>Precision over noise. Purpose over hype.</p>
+                    <p>March 6th, 2026</p>
                     <button onClick={() => window.open('https://forms.gle/sXSnBG9SkJk1sUBAA', '_blank')}>
                         Enter
                     </button>
 
+
+
+
                 </div>
+
+
             </div>
+            {/* Countdown Timer */}
+            <section style={{
+                background: 'linear-gradient(180deg, #0a0e10 0%, #0d1418 100%)',
+                padding: '2rem 1rem'
+            }}>
+                <Countdown targetDate="2026-03-06T00:00:00" />
+            </section>
 
             <section className="events-section" id="event-section">
                 <div className="section-header">
