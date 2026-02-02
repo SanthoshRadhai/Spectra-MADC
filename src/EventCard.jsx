@@ -55,10 +55,7 @@ export default function EventCard({
                             <span className="detail-text">{price}</span>
                         </div>
                         <p className="event-description">{description}</p>
-                        <button className="register-btn" onClick={onRegister}>
-                            <span>REGISTER NOW</span>
-                            <span className="btn-arrow">→</span>
-                        </button>
+                        
                     </div>
                     <div className="card-corner top-left"></div>
                     <div className="card-corner top-right"></div>

@@ -60,7 +60,7 @@ export default function Footer() {
 
         {/* Right Column - Social */}
         <div className="footer-column footer-social">
-          <h3 className="footer-heading">SPECTRA'25</h3>
+          <h3 className="footer-heading">SPECTRA'26</h3>
           <a
             href="https://www.instagram.com/madc_of_kec?igsh=MTZrYnN1MmllejJreQ=="
             target="_blank"
