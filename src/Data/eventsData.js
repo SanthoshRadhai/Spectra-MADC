@@ -16,7 +16,7 @@ export const events = [
         backImage: '/EventTwo/Back.jpeg',
         kanji: '祭',
         title: 'SHADOW OF THE SHOGUN',
-        subtitle: 'CTF',
+        subtitle: 'CAPTURE THE FLAG',
         category: "TECH EVENT",
         date: 'March 6,2026',
         location: 'IT PARK',
