@@ -54,7 +54,7 @@ export default function Footer() {
         <div className="footer-column">
           <h3 className="footer-heading">Address</h3>
           <address className="address-text">
-            Kongu Engineering College, IT Park, Srinivasa Ramanujam Seminar Hall
+            KONGU ENGINEERING COLLEGE, Perundurai Erode 638060 
           </address>
         </div>
 

@@ -14,7 +14,7 @@ export default function FAQ() {
         {
             category: "Registration",
             question: "Last date for registration ? ",
-            answer: "last date for registration is -----, however we encourage registering ASAP since few events may have limited seats and may get over."
+            answer: "last date for registration is 5th March 2026, however we encourage registering ASAP since few events may have limited seats and may get over."
         },
         {
             category: "Refreshment",
