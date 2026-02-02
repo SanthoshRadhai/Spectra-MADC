@@ -109,6 +109,7 @@ export default function Home() {
                             kanji={event.kanji}
                             title={event.title}
                             subtitle={event.subtitle}
+                            category={event.category}
                             date={event.date}
                             location={event.location}
                             price={event.price}

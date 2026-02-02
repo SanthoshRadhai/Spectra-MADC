@@ -1,7 +1,7 @@
 /* Event Card - Flip Container */
 .event-card {
   perspective: 1000px;
-  height: 650px; /* Increased height for portrait */
+  height: 700px; /* Increased height to accommodate category badge */
   cursor: pointer;
   opacity: 0;
   transform: translateY(30px);
@@ -97,7 +97,7 @@
 /* FRONT SIDE STYLES */
 .card-image-container {
   position: relative;
-  height: 75%; /* More space for portrait image */
+  height: 70%; /* Reduced to leave more room for content with badge */
   overflow: hidden;
 }
 
@@ -125,6 +125,7 @@
     rgba(13, 20, 24, 0.6) 70%,
     rgba(13, 20, 24, 0.95) 100%
   );
+  z-index: 1;
 }
 
 .card-front-content {
@@ -132,8 +133,9 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 2rem 2rem; /* Increased bottom padding for badge */
   text-align: center;
+  z-index: 2; /* Ensure content is above overlay */
 }
 
 .event-kanji {
@@ -172,15 +174,6 @@
     0 0 30px rgba(255, 50, 50, 0.7);
 }
 
-.title-slash {
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #ff3232, transparent);
-  margin: 1rem auto 0;
-  box-shadow: 0 0 10px rgba(255, 50, 50, 0.8);
-  transform: skewX(-20deg);
-}
-
 .event-subtitle {
   font-family: 'Chakra Petch', sans-serif;
   font-size: 1.5rem;
@@ -195,6 +188,62 @@
 .event-card:hover .event-subtitle {
   color: rgba(255, 255, 255, 0.8);
   letter-spacing: 3px;
+}
+
+.title-slash {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff3232, transparent);
+  margin: 1rem auto;
+  box-shadow: 0 0 10px rgba(255, 50, 50, 0.8);
+  transform: skewX(-20deg);
+}
+
+/* Event Category Badge */
+.event-category {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  display: inline-block;
+  border: 2px solid #ff3232;
+  background: rgba(255, 50, 50, 0.1);
+  backdrop-filter: blur(5px);
+  color: #ff3232;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 0 10px rgba(255, 50, 50, 0.3),
+    inset 0 0 10px rgba(255, 50, 50, 0.1);
+  z-index: 3; /* Ensure badge is above everything */
+}
+
+.event-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 50, 50, 0.2);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.event-card:hover .event-category {
+  border-color: #ff3232;
+  box-shadow: 
+    0 0 20px rgba(255, 50, 50, 0.6),
+    inset 0 0 20px rgba(255, 50, 50, 0.2);
+  transform: scale(1.05);
+}
+
+.event-card:hover .event-category::before {
+  left: 0;
 }
 
 /* BACK SIDE STYLES */
@@ -356,7 +405,11 @@
 /* Responsive */
 @media (max-width: 768px) {
   .event-card {
-    height: 600px;
+    height: 650px;
+  }
+
+  .card-image-container {
+    height: 68%;
   }
 
   .event-title {
@@ -367,6 +420,12 @@
   .event-kanji {
     font-size: 2.5rem;
     margin-bottom: -1.2rem;
+  }
+
+  .event-category {
+    font-size: 0.75rem;
+    padding: 0.4rem 1.2rem;
+    letter-spacing: 2px;
   }
 
   .card-back-content {
@@ -388,14 +447,23 @@
 
 @media (max-width: 480px) {
   .event-card {
-    height: 550px;
+    height: 600px;
+  }
+
+  .card-image-container {
+    height: 65%;
   }
 
   .card-front-content {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem 1.5rem;
   }
 
   .event-title {
     font-size: 1.2rem;
+  }
+
+  .event-category {
+    font-size: 0.7rem;
+    padding: 0.35rem 1rem;
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './EventCard.css';
 
 export default function EventCard({
@@ -7,11 +7,12 @@ export default function EventCard({
     kanji,
     title,
     subtitle,
+    category,
     date,
     location,
     price,
     description,
-    onRegister
+    
 }) {
     return (
         <div className="event-card" id='event-section'>
@@ -27,6 +28,7 @@ export default function EventCard({
                         <h3 className="event-title">{title}</h3>
                         <p className="event-subtitle">{subtitle}</p>  
                         <div className="title-slash"></div>
+                        <span className="event-category">{category}</span>
                     </div>
                     <div className="card-corner top-left"></div>
                     <div className="card-corner top-right"></div>
@@ -73,6 +75,7 @@ EventCard.defaultProps = {
     backImage: '/event-details.jpg',
     kanji: '侍',
     title: 'EVENT NAME',
+    category: 'TECH',
     date: 'TBA',
     location: 'TBA',
     price: 'TBA',
