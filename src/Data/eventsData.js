@@ -5,9 +5,9 @@ export const events = [
         kanji: '侍',
         title: 'CLASH OF SLIDES',
         subtitle: 'Paper Presentation',
-        date: 'February 24, 2026',
+        date: 'March 6,2026',
         location: 'IT PARK',
-        price: '100',
+        price: 'One time payment (Per Head)',
         description: 'Open choice paper presentation. Maximum 3 members per team. Presentation time is 4–5 minutes. Slide limit is 5–6 slides excluding Introduction and Thank You. Winners receive hard copy certificates. All participants receive e-certificates.'
     },
     {
@@ -16,9 +16,9 @@ export const events = [
         kanji: '祭',
         title: 'SHADOW OF THE SHOGUN',
         subtitle: 'CTF',
-        date: 'February 24, 2026',
+        date: 'March 6,2026',
         location: 'IT PARK',
-        price: '100',
+        price: 'One time payment (Per Head)',
         description: 'Solo participation only. Offline CTF conducted via GitHub repository. Medium and hard level challenges. Flags must follow CTF{...} format and are case-sensitive. Submission through Google Form. No flag sharing, brute-force, automation, or plagiarism. Offline tools allowed and internet permitted unless restricted. Winners receive hard copy certificates and all valid participants receive e-certificates.'
     },
     {
@@ -27,9 +27,9 @@ export const events = [
         kanji: '武',
         title: 'INKFORGE',
         subtitle: 'Image Prompting',
-        date: 'February 24, 2026',
+        date: 'March 6,2026',
         location: 'IT PARK',
-        price: '100',
+        price: 'One time payment (Per Head)',
         description: 'Each participant will be shown one AI-generated image and must write a clear, creative, and descriptive prompt to recreate it. No copy-pasting allowed. Limited time to craft the prompt. Recreated image will be judged based on accuracy and creativity. Judges’ decision is final.'
     },
     {
@@ -38,9 +38,9 @@ export const events = [
         kanji: '金',
         title: 'BID OF KATANA',
         subtitle: 'Auction to Auction',
-        date: 'February 24, 2026',
+        date: 'March 6,2026',
         location: 'IT PARK',
-        price: '100',
+        price: 'One time payment (Per Head)',
         description: 'Team event with 2–3 members per team. Bidding must stay within the virtual budget. Only auctioned items may be used. Mobile phones are strictly prohibited. Time limits must be followed. Judges’ decision is final.'
     },
     {
@@ -49,9 +49,9 @@ export const events = [
         kanji: '影',
         title: 'RAW VISION',
         subtitle: 'No-Edit Photography',
-        date: 'February 24, 2026',
+        date: 'March 6,2026',
         location: 'IT PARK',
-        price: '100',
+        price: 'One time payment (Per Head)',
         description: 'Participants must capture one original photograph during the competition time. No editing allowed including filters, color correction, or cropping. Photos must be taken using default camera settings. Limited time provided and theme must be followed. Screenshots, AI images, or old photos are prohibited. EXIF data may be checked. Any violation leads to disqualification. Judges’ decision is final.'
     }
 ];
