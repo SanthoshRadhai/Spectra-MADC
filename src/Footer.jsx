@@ -2,7 +2,7 @@ import './Footer.css';
 
 export default function Footer() {
   return (
-    <footer className="footer-section">
+    <footer className="footer-section" id="footer-contact">
       {/* Decorative top border line */}
       <div className="footer-top-line" aria-hidden="true"></div>
 

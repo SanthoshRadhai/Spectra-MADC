@@ -14,7 +14,7 @@ export default function EventCard({
     onRegister
 }) {
     return (
-        <div className="event-card">
+        <div className="event-card" id='event-section'>
             <div className="card-inner">
                 {/* FRONT SIDE */}
                 <div className="card-front">

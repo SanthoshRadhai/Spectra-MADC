@@ -38,9 +38,9 @@ export default function Home() {
 
                     {/* Navigation Links */}
                     <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
-                        <li><a href="#events" onClick={closeMenu}>Events</a></li>
+                        <li><a href="#event-section" onClick={closeMenu}>Events</a></li>
                         <li><a href="#about" onClick={closeMenu}>About</a></li>
-                        <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+                        <li><a href="#footer-contact" onClick={closeMenu}>Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -60,9 +60,9 @@ export default function Home() {
                 <nav className="top-nav">
                     <div className="logo">Midnight City</div>
                     <ul className="nav-links">
-                        <li><a href="#events">Events</a></li>
+                        <li><a href="#event-section">Events</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#footer-contact">Contact</a></li>
                     </ul>
                 </nav>
 
@@ -74,7 +74,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <section className="events-section">
+            <section className="events-section" id="event-section">
                 <div className="section-header">
                     <span className="japanese-accent">武</span>
                     <h2 className="section-title">UPCOMING EVENTS</h2>
