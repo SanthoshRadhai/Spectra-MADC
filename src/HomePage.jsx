@@ -72,7 +72,8 @@ export default function Home() {
 
                 <div className="overlay">
                     <h1>SPECTRA</h1>
-                    <p>Enter with Skill. Leave with Legacy.</p>
+                    <p>Kongu Engineering College</p>
+                    <p>CV Raman Seminar hall, IT PARK</p>
                     <p>March 6th, 2026</p>
                     <button onClick={() => window.open('https://forms.gle/sXSnBG9SkJk1sUBAA', '_blank')}>
                         Enter
