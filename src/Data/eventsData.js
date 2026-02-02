@@ -53,5 +53,16 @@ export const events = [
         location: 'IT PARK',
         price: 'One time payment (Per Head)',
         description: 'Participants must capture one original photograph during the competition time. No editing allowed including filters, color correction, or cropping. Photos must be taken using default camera settings. Limited time provided and theme must be followed. Screenshots, AI images, or old photos are prohibited. EXIF data may be checked. Any violation leads to disqualification. Judges’ decision is final.'
-    }
+    },
+    {
+    frontImage: '/EventSix/Front.jpeg',
+    backImage: '/EventSix/Back.jpeg',
+    kanji: '設',
+    title: 'BRUSH OF EMPEROR',
+    subtitle: 'UI / UX Design',
+    date: 'February 24, 2026',
+    location: 'IT PARK',
+    price: 'One time payment (Per Head)',
+    description: 'UI/UX design challenge. Maximum team size is 2 members. Total duration is 1.5 hours. Design must be created using Figma. Mobile design is mandatory, while desktop design is optional and considered an additional advantage.'
+}
 ];

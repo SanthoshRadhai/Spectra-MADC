@@ -70,7 +70,10 @@ export default function Home() {
                     <h1>SPECTRA</h1>
                     <p>Enter with Skill. Leave with Legacy.</p>
                     <p>Precision over noise. Purpose over hype.</p>
-                    <button>Enter</button>
+                    <button onClick={() => window.open('https://forms.gle/sXSnBG9SkJk1sUBAA', '_blank')}>
+                        Enter
+                    </button>
+
                 </div>
             </div>
 

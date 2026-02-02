@@ -110,10 +110,10 @@ export default function About(){
                                 Every event is crafted with surgical precision, blending ancient combat philosophy with cutting-edge technology. We believe in <strong>merit over popularity</strong>, <strong>precision over power</strong>, and <strong>legacy over legacy-building</strong>.
                             </p>
                         </div>
-
+{/* 
                         <button className="about-button">
                             Join The Movement
-                        </button>
+                        </button> */}
                     </div>
                 </div>
             </section>
